@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government of Nepal - Climate Information</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: URL("weather.jpg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+        }
+        .all {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            z-index: 10;
+        }
+        .leftone, .rightone {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+        .logo {
+            width: 100%;
+            max-width: 100px;
+            height: auto;
+            max-height: 100px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h3, p {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #333;
+            text-align: center;
+        }
+        .mainpart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+            width: 100%;
+            padding: 20px;
+        }
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px 16px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .error {
+            color: red;
+        }
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+            .leftone, .rightone {
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="navbar">
+            <div class="leftone">
+                <div class="image-container">
+                    <img src="gov logo.png" class="logo" alt="Government of Nepal">
+                </div>
+                <p>Government Of Nepal</p>
+                <p>Dhangadhi Sub-metropolitan City</p>
+            </div>
+            <div class="rightone">
+                <div class="image-container">
+                    <img src="gov logo.png" class="logo" alt="Government of Nepal">
+                </div>
+                <p>Government Of Nepal</p>
+                <p>Ministry Of Energy, Water Resources and Irrigation</p>
+                <p>Department of Hydrology and Meteorology</p>
+            </div>
+        </div>
+
+        <div class="mainpart">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Maximum Temp</th>
+                        <th>Minimum Temp</th>
+                        <th>Avg Temp</th>
+                        <th>Rainfall (mm)</th>
+                    </tr>
+                </thead>
+                <tbody id="climate-data">
+                    <tr>
+                        <td>30°C</td>
+                        <td>15°C</td>
+                        <td>22°C</td>
+                        <td>50 mm</td>
+                    </tr>
+                    <tr>
+                        <td>32°C</td>
+                        <td>16°C</td>
+                        <td>24°C</td>
+                        <td>45 mm</td>
+                    </tr>
+                    <tr>
+                        <td>28°C</td>
+                        <td>14°C</td>
+                        <td>21°C</td>
+                        <td>60 mm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script>
+        // This script is now using static dummy data, no need for fetch request
+    </script>
+
+</body>
+</html>
