@@ -8,7 +8,8 @@
         <style>
             body {
                 font-family: 'Roboto', sans-serif; /* Applied Roboto font */
-                background-image: URL("wearher.jpg");
+                /* background-image: URL("wearher.jpg"); */
+                background-color: #13274F;
                 background-size: cover;
                 background-position: center;
                 margin: 0;
@@ -16,12 +17,13 @@
                 display: flex;
                 justify-content: flex-start;
                 flex-direction: column;
+                
             }
         .all {
             width: 100%;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
+            justify-content: flex-start;
         }
         .navbar {
             display: flex;
@@ -60,14 +62,14 @@
         h3, p {
             margin: 0;
             font-size: 1.2rem;
-            color: #333;
+            color:white;
             text-align: center;
         }
         .mainpart {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 80px;
+            margin-top: 0px;
             width: 100%;
             padding: 20px;
         }
@@ -91,20 +93,12 @@
             background-color: #f4f4f4;
             font-size: 1.3rem; /* Slightly larger font size for table headers */
         }
-        tr:hover td {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        tr:hover td:first-child {
-            font-weight: bold;
-            color: #007BFF;
-        }
-        tr:hover td:last-child {
-            font-weight: bold;
-            color: #28a745;
-        }
         .error {
             color: red;
+        }
+        .weather-info{
+            margin-top: 70px;
+            font-size: 30px;
         }
         @media screen and (max-width: 768px) {
             .navbar {
@@ -136,11 +130,13 @@
                 <p>Department of Hydrology and Meteorology</p>
             </div>
         </div>
+        <p class="weather-info">WEATHER INFORMATION</p>
 
         <div class="mainpart">
             <table>
                 <thead>
                     <tr>
+                        <th>Date and Time</th>
                         <th>Maximum Temp</th>
                         <th>Minimum Temp</th>
                         <th>Avg Temp</th>
@@ -149,6 +145,7 @@
                 </thead>
                 <tbody id="climate-data">
                     <tr>
+                        <td>14 Dec 2024, 14:50</td>
                         <td>30°C</td>
                         <td>15°C</td>
                         <td>22°C</td>
