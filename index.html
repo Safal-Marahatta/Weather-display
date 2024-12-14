@@ -96,7 +96,22 @@
             margin-top: 20px;
             font-size: 30px;
             color: white;
+            animation: glowing 1.5s infinite alternate; /* Apply glowing animation */
         }
+
+                /* Glowing animation */
+                @keyframes glowing {
+            0% {
+                text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600, 0 0 50px #ff6600;
+            }
+            50% {
+                text-shadow: 0 0 5px #ff6600, 0 0 10px #ff6600, 0 0 15px #ff6600, 0 0 20px #ffcc00, 0 0 30px #ffcc00, 0 0 40px #ffcc00, 0 0 50px #ffcc00;
+            }
+            100% {
+                text-shadow: 0 0 5px #ff3300, 0 0 10px #ff3300, 0 0 15px #ff3300, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600, 0 0 50px #ff6600;
+            }
+        }
+
         .powered {
             margin: 20px 0;
             color: white;
